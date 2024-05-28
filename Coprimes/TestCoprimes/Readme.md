@@ -8,10 +8,9 @@ Shows in a simple way how to generate generic coprimes for any relevant data typ
 
       cpr.NextRangeCoprime(i32s);
 
+<p>Special DataTypes such as Int128 or BigInteger are also possible</p>
 
-Special DataTypes such as Int128 or BigInteger are also possible
-
-Here for example for Int128
+>Here for example for Int128
 
       var i128 = cpr.NextRangeCoprime<Int128>();
 
@@ -20,7 +19,7 @@ Here for example for Int128
       cpr.NextRangeCoprime(i128s);
 
 
-Here for example for BigInteger
+>Here for example for BigInteger
 
       var bits = ToPowerTwo(RandomHolder.NextInt32(8, 1025));
       
