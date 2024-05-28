@@ -1,7 +1,5 @@
 # Mathematic Coprimes
 
-Visit [GitHub Pages](https://pages.github.com/)
-
 <p><br>Shows in a simple way how to generate generic coprimes for any relevant data type.</p>
 
       var i32 = cpr.NextRangeCoprime<int>();
@@ -9,8 +7,9 @@ Visit [GitHub Pages](https://pages.github.com/)
       var i32s = cpr.RngRangeCoprime<int>(128);
 
       cpr.NextRangeCoprime(i32s);
+      
 <p><br></p>
-Special DataTypes such as [Int128](https://learn.microsoft.com/de-de/dotnet/api/system.int128/) or [BigInteger](https://learn.microsoft.com/de-de/dotnet/api/system.numerics.biginteger/) are also possible
+Special DataTypes such as [Int128 Int128](https://learn.microsoft.com/de-de/dotnet/api/system.int128/) or [BigInteger BigInteger](https://learn.microsoft.com/de-de/dotnet/api/system.numerics.biginteger/) are also possible
 <p><br></p>
 >Here for example for Int128
 
