@@ -7,6 +7,15 @@
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <Platforms>AnyCPU;x64</Platforms>
+
+    <Authors>© Michele Natale 2024</Authors>
+    <Company>© Michele Natale 2024</Company>
+    <Product>© Generic Coprimes 2024</Product>
+    <Description>
+      Shows in a simple way how to generate generic coprimes for any relevant data type.
+    </Description>
+    <Copyright>© Generic Coprimes 2024 created by © Michele Natale 2024.</Copyright>
+  
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
