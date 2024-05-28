@@ -8,7 +8,7 @@
 
       cpr.NextRangeCoprime(i32s);
 
-<p><br>Special DataTypes such as [Int128](https://learn.microsoft.com/de-de/dotnet/api/system.int128/) or [BigInteger](https://learn.microsoft.com/de-de/dotnet/api/system.numerics.biginteger/) are also possible</p>
+<p><br>Special DataTypes such as [Int128](https://learn.microsoft.com/de-de/dotnet/api/system.int128/) or [BigInteger](https://learn.microsoft.com/de-de/dotnet/api/system.numerics.biginteger?view=net-8.0) are also possible</p>
 
 >Here for example for Int128
 
