@@ -8,7 +8,7 @@ Shows in a simple way how to generate generic coprimes for any relevant data typ
 
       cpr.NextRangeCoprime(i32s);
 
-<p>Special DataTypes such as Int128 or BigInteger are also possible</p>
+<p><br>Special DataTypes such as Int128 or BigInteger are also possible</p>
 
 >Here for example for Int128
 
