@@ -13,3 +13,6 @@ Shows in a simple way how to generate generic coprimes for any relevant data typ
       cpr.NextRangeCoprime(i32s);
       if (!IsCoprimeRange(i32s))
         throw new ArgumentException(null);
+
+Special data types such as Int128 or BigInteger are also possible
+
