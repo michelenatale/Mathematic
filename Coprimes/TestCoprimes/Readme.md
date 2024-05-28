@@ -1,6 +1,6 @@
 # Mathematic Coprimes
 
-<p><br>Shows in a simple way how to generate generic coprimes for any relevant data type.</p>p
+<p><br>Shows in a simple way how to generate generic coprimes for any relevant data type.</p>
 
       var i32 = cpr.NextRangeCoprime<int>();
 
