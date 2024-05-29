@@ -36,7 +36,7 @@ public class RandomHolder
 
   public static byte[] ToBytes(int size, byte max)
   {
-    return ToBytes(size,0, max);
+    return ToBytes(size, 0, max);
   }
 
   public static byte[] ToBytes(int size, byte min, byte max)
@@ -68,12 +68,14 @@ public class RandomHolder
 
   public static int NextInt32()
   {
-    return RandomNumberGenerator.GetInt32(int.MaxValue);
+    var bytes = new byte[4];
+    Rand.GetNonZeroBytes(bytes);
+    return Math.Abs(BitConverter.ToInt32(bytes, 0));
   }
 
   public static int NextInt32(int max)
   {
-    return RandomNumberGenerator.GetInt32(max);
+    return NextInt32(0, max);
   }
 
   public static int NextInt32(int min, int max)
@@ -81,7 +83,12 @@ public class RandomHolder
     if (min < 0) min = Math.Abs(min);
     if (max < 0) max = Math.Abs(max);
     ArgumentOutOfRangeException.ThrowIfGreaterThanOrEqual(min, max);
-    return RandomNumberGenerator.GetInt32(min, max);
+
+    var d = max - min;
+    var bytes = new byte[4];
+    Rand.GetNonZeroBytes(bytes);
+    var tmp = Math.Abs(BitConverter.ToInt32(bytes, 0));
+    return min + tmp % d;
   }
 
   public static int[] ToInt32(int size, int min, int max)
@@ -111,7 +118,9 @@ public class RandomHolder
 
   public static long NextInt64()
   {
-    return RandomNumberGenerator.GetInt32(int.MaxValue);
+    var bytes = new byte[8];
+    Rand.GetNonZeroBytes(bytes);
+    return Math.Abs(BitConverter.ToInt64(bytes, 0));
   }
 
   public static long NextInt64(long max)
@@ -161,6 +170,7 @@ public class RandomHolder
   public static ulong NextUInt64()
   {
     var bytes = new byte[8];
+    Rand.GetNonZeroBytes(bytes);
     return BitConverter.ToUInt64(bytes, 0);
   }
 
