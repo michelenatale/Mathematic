@@ -1,6 +1,6 @@
 # Mathematic
 
-## Circle-Fitter
+## Generate coprimes
 
 Generate coprimes in any quantity with Full-Generic. 
 
