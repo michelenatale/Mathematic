@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircleFitterGausNewton", "CircleFitterGausNewton\CircleFitterGausNewton.csproj", "{7A0FB0FE-AAEA-4F28-BB3E-10A986DD3EA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A0FB0FE-AAEA-4F28-BB3E-10A986DD3EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A0FB0FE-AAEA-4F28-BB3E-10A986DD3EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A0FB0FE-AAEA-4F28-BB3E-10A986DD3EA9}.Debug|x64.ActiveCfg = Debug|x64
+		{7A0FB0FE-AAEA-4F28-BB3E-10A986DD3EA9}.Debug|x64.Build.0 = Debug|x64
+		{7A0FB0FE-AAEA-4F28-BB3E-10A986DD3EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A0FB0FE-AAEA-4F28-BB3E-10A986DD3EA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A0FB0FE-AAEA-4F28-BB3E-10A986DD3EA9}.Release|x64.ActiveCfg = Release|x64
+		{7A0FB0FE-AAEA-4F28-BB3E-10A986DD3EA9}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DF087CB-A790-4E98-933A-9FD8B993803E}
+	EndGlobalSection
+EndGlobal
