@@ -1,12 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
+    <OutputType>WinExe</OutputType>
+    <Platforms>AnyCPU;x64</Platforms>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Platforms>AnyCPU;x64</Platforms>
+    <TargetFramework>net8.0-windows</TargetFramework>
+
+    <Authors>© Michele Natale 2024</Authors>
+    <Product>CircleFitterGausNewton</Product>
+    <Company>© Michele Natale 2024</Company>
+    <Description>
+      Simple circle fitter, using the Gauss-Newton method (least squares).
+    </Description>
+    <Copyright>Simple circle fitter created by © Michele Natale 2024</Copyright>
+
   </PropertyGroup>
 
 </Project>
