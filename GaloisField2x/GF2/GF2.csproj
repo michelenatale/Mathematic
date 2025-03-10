@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <Platforms>AnyCPU;x64</Platforms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFramework>net9.0</TargetFramework> 
+
+    <Authors>© Michele Natale 2025</Authors>
+    <Product>© GF2 2020</Product>
+    <Company>© Michele Natale 2025</Company>
+    <Description>
+      Provides tools for Galois calculations (GF2), where the character of the Galois field is always 2.
+    </Description>
+    <Copyright>© GF2 2020 created by © Michele Natale 2020 - Updatet to .Net9.0 by © Michele Natale 2025.</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AppliedAlgebra.GfPolynoms" Version="1.2.1" />
+  </ItemGroup>
+
+</Project>
