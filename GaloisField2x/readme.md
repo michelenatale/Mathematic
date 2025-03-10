@@ -1,4 +1,4 @@
-#Galois Field or Finite Field
+# Galois Field or Finite Field
 
 [Galois Field](https://en.wikipedia.org/wiki/Finite_field), or [Finite Field](https://en.wikipedia.org/wiki/Finite_field), possess finite mathematical structures. It is a set of numbers that consists of a finite number of elements and has two main operations, [addition and multiplication](https://en.wikipedia.org/wiki/Finite_field_arithmetic), which follow very specific rules.
 
