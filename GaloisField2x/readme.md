@@ -9,4 +9,4 @@ The Galois Field shown here has a fixed generator = 2 (also known as a character
 The following [parameters](https://en.wikipedia.org/wiki/Finite_field_arithmetic) are required to create a Galois Field.
 - Generator (fixed = 2),  
 - Exponent,
-- order
+- Order
