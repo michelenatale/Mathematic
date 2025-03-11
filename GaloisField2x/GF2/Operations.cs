@@ -129,7 +129,6 @@ partial struct GF2
   /// <returns>Raising the value to the power of the exponent.</returns>
   public static GF2 Pow(GF2 value, int exp)
   {
-    var bla = BigInteger.Pow(BigInteger.One, 1);
     var result = new GF2(value.Order, value.IDP, 1);
     for (var i = 0; i < exp; i++)
       result *= value;
