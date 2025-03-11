@@ -14,7 +14,7 @@ https://github.com/michelenatale/Mathematic/tree/main/CircleFitter
 
 ## Galois Field or Finite Field
 
-[Galois Field](https://en.wikipedia.org/wiki/Finite_field), or [Finite Field](https://en.wikipedia.org/wiki/Finite_field), possess finite mathematical structures. It is a set of numbers that consists of a finite number of elements and has two main operations, [addition and multiplication](https://en.wikipedia.org/wiki/Finite_field_arithmetic), which follow very specific rules.
+Is a very simple [Galois Field](https://en.wikipedia.org/wiki/Finite_field), or [Finite Field](https://en.wikipedia.org/wiki/Finite_field) calculator with the base 2 (Generator, Character), which has two main operations, [addition and multiplication](https://en.wikipedia.org/wiki/Finite_field_arithmetic). All other operators (subtraction, division, inverse, etc.) are operations that follow very specific mathematical rules and are therefore legitimate. 
 
 https://github.com/michelenatale/Mathematic/tree/main/GaloisField2x
 
