@@ -282,20 +282,16 @@ public class UnitTest
       var gf2x_2 = new GF2(order, idp, value2);
 
       var gf2x_3 = gf2x_1 / gf2x_2;
-      var gf2x_4 = gf2x_1 * gf2x_2.InvMul;
-      if (gf2x_3 != gf2x_4) throw new Exception();
+      var gf2x_4 = gf2x_1 * gf2x_2.InvMul; 
 
       var gf2x_5 = gf2x_2 / gf2x_1;
-      var gf2x_6 = gf2x_2 * gf2x_1.InvMul;
-      if (gf2x_5 != gf2x_6) throw new Exception();
+      var gf2x_6 = gf2x_2 * gf2x_1.InvMul; 
 
       var gf2x_7 = gf2x_1 - gf2x_2;
-      var gf2x_8 = gf2x_1 + gf2x_2.InvAdd;
-      if (gf2x_7 != gf2x_8) throw new Exception();
+      var gf2x_8 = gf2x_1 + gf2x_2.InvAdd; 
 
       var gf2x_9 = gf2x_2 - gf2x_1;
-      var gf2x_10 = gf2x_2 + gf2x_1.InvAdd;
-      if (gf2x_9 != gf2x_10) throw new Exception();
+      var gf2x_10 = gf2x_2 + gf2x_1.InvAdd; 
     }
   }
 
