@@ -10,6 +10,7 @@ public class UnitTest
 {
   public static void Start()
   {
+    UTestSpec.Start(); //Operations
 
     TestAuthor();
     TestConstructor();
@@ -36,6 +37,7 @@ public class UnitTest
     TestOrder();
     TestOrderIdp();
     TestOrderIdpValue();
+    TestGF2Init();
   }
 
   private static void TestOrder()
@@ -74,6 +76,23 @@ public class UnitTest
       var value = RngInt(order);
       var idp = GF2.ToIDPs[GF2.ToExponent(order)];
       var gf = new GF2(order, idp, value);
+    }
+  }
+
+  private static void TestGF2Init()
+  {
+    //Up to 31 is possible, but a few are enough for the test.
+
+    var cnt = GF2.MAX_ORDER_EXP - 11;
+    for (var i = GF2.MIN_ORDER_EXP + 12; i < cnt; i++)
+    {
+      var order = 1ul << i;
+      var value = RngInt(order);
+      var idp = GF2.ToIDPs[GF2.ToExponent(order)];
+      var gf_1 = new GF2(order, idp, value);
+
+      var gf_2 = new GF2(gf_1);
+      if (gf_1 != gf_2) throw new Exception();
     }
   }
 
@@ -265,12 +284,20 @@ public class UnitTest
       var gf2x_2 = new GF2(order, idp, value2);
 
       var gf2x_3 = gf2x_1 / gf2x_2;
-      var gf2x_4 = gf2x_3 * gf2x_2;
-      if (gf2x_1 != gf2x_4) throw new Exception();
+      var gf2x_4 = gf2x_1 * gf2x_2.InvMul;
+      if (gf2x_3 != gf2x_4) throw new Exception();
 
       var gf2x_5 = gf2x_2 / gf2x_1;
-      var gf2x_6 = gf2x_5 * gf2x_1;
-      if (gf2x_2 != gf2x_6) throw new Exception();
+      var gf2x_6 = gf2x_2 * gf2x_1.InvMul;
+      if (gf2x_5 != gf2x_6) throw new Exception();
+
+      var gf2x_7 = gf2x_1 - gf2x_2;
+      var gf2x_8 = gf2x_1 + gf2x_2.InvAdd;
+      if (gf2x_7 != gf2x_8) throw new Exception();
+
+      var gf2x_9 = gf2x_2 - gf2x_1;
+      var gf2x_10 = gf2x_2 + gf2x_1.InvAdd;
+      if (gf2x_9 != gf2x_10) throw new Exception();
     }
   }
 
