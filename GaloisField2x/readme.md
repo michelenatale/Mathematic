@@ -14,4 +14,25 @@ The following [parameters](https://en.wikipedia.org/wiki/Finite_field_arithmetic
 
 There are numerous answers to the question of where Galois Fields are used. The fact is, however, that Galois Fields are primarily used in mathematics ([number theory](https://en.wikipedia.org/wiki/Number_theory) etc.) as well as in computer science ([cryptography](https://en.wikipedia.org/wiki/Cryptography) and [coding theory](https://en.wikipedia.org/wiki/Coding_theory) etc.).  
 
+And here is a bit of code:
+```
+private static void Test()
+{
+  var exp = 8;
+  var order = 1ul << exp;
+  var idp = GF2.ToIDPs[exp];
 
+  var value1 = RngInt(order);
+  var gf2x_1 = new GF2(order, idp, value1);
+
+  var value2 = RngInt(order);
+  var gf2x_2 = new GF2(order, idp, value2);
+
+  var add = gf2x_1 + gf2x_2;
+  var sub = gf2x_1 - gf2x_2;
+  var mul = gf2x_1 * gf2x_2;
+  var div = gf2x_1 / gf2x_2;
+
+  ...
+}
+```
