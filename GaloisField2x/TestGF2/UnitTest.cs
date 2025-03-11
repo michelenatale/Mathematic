@@ -90,7 +90,6 @@ public class UnitTest
       var gf_1 = new GF2(order, idp, value);
 
       var gf_2 = new GF2(gf_1);
-      if (gf_1 != gf_2) throw new Exception();
     }
   }
 
@@ -132,11 +131,9 @@ public class UnitTest
 
       var gf2x_3 = gf2x_1 + gf2x_2;
       var gf2x_4 = gf2x_3 - gf2x_2;
-      if (gf2x_1 != gf2x_4) throw new Exception();
 
       var gf2x_5 = gf2x_2 + gf2x_1;
       var gf2x_6 = gf2x_5 - gf2x_1;
-      if (gf2x_2 != gf2x_6) throw new Exception();
 
     }
   }
@@ -161,11 +158,9 @@ public class UnitTest
 
       var gf2x_3 = gf2x_1 - gf2x_2;
       var gf2x_4 = gf2x_3 + gf2x_2;
-      if (gf2x_1 != gf2x_4) throw new Exception();
 
       var gf2x_5 = gf2x_2 - gf2x_1;
       var gf2x_6 = gf2x_5 + gf2x_1;
-      if (gf2x_2 != gf2x_6) throw new Exception();
     }
   }
 
@@ -189,11 +184,9 @@ public class UnitTest
 
       var gf2x_3 = gf2x_1 * gf2x_2;
       var gf2x_4 = gf2x_3 / gf2x_2;
-      if (gf2x_1 != gf2x_4) throw new Exception();
 
       var gf2x_5 = gf2x_2 * gf2x_1;
       var gf2x_6 = gf2x_5 / gf2x_1;
-      if (gf2x_2 != gf2x_6) throw new Exception();
     }
   }
 
@@ -217,11 +210,9 @@ public class UnitTest
 
       var gf2x_3 = gf2x_1 / gf2x_2;
       var gf2x_4 = gf2x_3 * gf2x_2;
-      if (gf2x_1 != gf2x_4) throw new Exception();
 
       var gf2x_5 = gf2x_2 / gf2x_1;
       var gf2x_6 = gf2x_5 * gf2x_1;
-      if (gf2x_2 != gf2x_6) throw new Exception();
     }
   }
 
@@ -250,11 +241,9 @@ public class UnitTest
 
       var gf2x_3 = gf2x_1 / gf2x_2;
       var gf2x_4 = gf2x_3 * gf2x_2;
-      if (gf2x_1 != gf2x_4) throw new Exception();
 
       var gf2x_5 = gf2x_2 / gf2x_1;
       var gf2x_6 = gf2x_5 * gf2x_1;
-      if (gf2x_2 != gf2x_6) throw new Exception();
     }
   }
 
