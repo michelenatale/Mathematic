@@ -1,5 +1,4 @@
 ﻿
-using System.Numerics;
 
 namespace michele.natale.Numerics;
 
@@ -23,6 +22,69 @@ partial struct GF2
 
   //public static explicit operator ulong(GF2 value) => value.Value;
   //public static explicit operator GF2(ulong value) => new(value);
+
+  /// <summary>
+  /// Calculates the Galois addition.
+  /// <para>Updated by <see href="https://github.com/michelenatale">© Michele Natale 2025</see></para>  
+  /// </summary>
+  /// <param name="value">Desired GF2-Value</param>
+  /// <returns>New GF2-Value</returns>
+  public ulong Addition(ulong value) =>
+    ExtMod(this.Value ^ value, this.Order);
+
+  /// <summary>
+  /// Calculates the Galois subtraction.
+  /// <para>Updated by <see href="https://github.com/michelenatale">© Michele Natale 2025</see></para>  
+  /// </summary>
+  /// <param name="value">Desired GF2-Value</param>
+  /// <returns>new GF2-Value</returns>
+  public ulong Subtract(ulong value) =>
+    ExtMod(this.Value ^ value, this.Order);
+
+  /// <summary>
+  /// Calculates the Galois multiplication.
+  /// <para>Updated by <see href="https://github.com/michelenatale">© Michele Natale 2025</see></para>  
+  /// </summary>
+  /// <param name="value">Desired GF2-Value</param>
+  /// <returns>new GF2-Value</returns>
+  public ulong Multiply(ulong value)
+  {
+    ulong order = this.Order, result = 0;
+
+    value = ExtMod(value, order);
+    if (this.Value != 0 && value != 0)
+    {
+      var tmp = (this.Log[this.Value] + this.Log[value]) % (order - 1);
+      result = this.Exp[tmp];
+    }
+
+    return ExtMod(result, order);
+  }
+
+  /// <summary>
+  /// Calculates the Galois division.
+  /// <para>Updated by <see href="https://github.com/michelenatale">© Michele Natale 2025</see></para>  
+  /// </summary>
+  /// <param name="value">Desired GF2-Value</param>
+  /// <returns>new GF2-Value</returns>
+  /// <exception cref="ArgumentNullException"></exception>
+  public ulong Divide(ulong value)
+  {
+    value = ExtMod(value, this.Order);
+
+    if (value == 0)
+      throw new ArgumentNullException(nameof(value));
+
+    ulong order = this.Order, result = 0;
+    if (this.Value != 0)
+    {
+      var tmp = (order + this.Log[this.Value] - this.Log[value] - 1) % (order - 1);
+      result = this.Exp[tmp];
+    }
+
+    return ExtMod(result, order); 
+  }
+
 
   /// <summary>
   /// Calculates the Galois addition.
