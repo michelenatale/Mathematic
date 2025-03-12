@@ -15,8 +15,4 @@
     <Copyright>© GF2 2020 created by © Michele Natale 2020 - Updatet to .Net9.0 by © Michele Natale 2025.</Copyright>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="AppliedAlgebra.GfPolynoms" Version="1.2.1" />
-  </ItemGroup>
-
 </Project>
