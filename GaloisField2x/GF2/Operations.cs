@@ -30,7 +30,7 @@ partial struct GF2
   /// <param name="value">Desired GF2-Value</param>
   /// <returns>New GF2-Value</returns>
   public ulong Addition(ulong value) =>
-    ExtMod(this.Value ^ value, this.Order);
+    ExtMod(this.Value ^ ExtMod(value,this.Order), this.Order);
 
   /// <summary>
   /// Calculates the Galois subtraction.
@@ -39,7 +39,7 @@ partial struct GF2
   /// <param name="value">Desired GF2-Value</param>
   /// <returns>new GF2-Value</returns>
   public ulong Subtract(ulong value) =>
-    ExtMod(this.Value ^ value, this.Order);
+    ExtMod(this.Value ^ ExtMod(value, this.Order), this.Order);
 
   /// <summary>
   /// Calculates the Galois multiplication.
