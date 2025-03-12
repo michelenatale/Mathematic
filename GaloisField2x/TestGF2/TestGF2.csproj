@@ -17,7 +17,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Galois\OldProjects\FiniteFieldsBigInteger\Source\FiniteFieldsBigInteger\FiniteFieldsBigInteger.csproj" />
     <ProjectReference Include="..\GF2\GF2.csproj" />
   </ItemGroup>
 
