@@ -30,7 +30,7 @@ partial struct GF2
   /// <param name="value">Desired GF2-Value</param>
   /// <returns>New GF2-Value</returns>
   public ulong Addition(ulong value) =>
-    ExtMod(this.Value ^ ExtMod(value,this.Order), this.Order);
+    ExtMod(this.Value ^ ExtMod(value, this.Order), this.Order);
 
   /// <summary>
   /// Calculates the Galois subtraction.
@@ -67,13 +67,13 @@ partial struct GF2
   /// </summary>
   /// <param name="value">Desired GF2-Value</param>
   /// <returns>new GF2-Value</returns>
-  /// <exception cref="ArgumentNullException"></exception>
+  /// <exception cref="DivideByZeroException"></exception>
   public ulong Divide(ulong value)
   {
     value = ExtMod(value, this.Order);
 
     if (value == 0)
-      throw new ArgumentNullException(nameof(value));
+      throw new DivideByZeroException(nameof(value));
 
     ulong order = this.Order, result = 0;
     if (this.Value != 0)
@@ -82,7 +82,7 @@ partial struct GF2
       result = this.Exp[tmp];
     }
 
-    return ExtMod(result, order); 
+    return ExtMod(result, order);
   }
 
 
@@ -100,6 +100,16 @@ partial struct GF2
      $"'+'-Operation has failed!");
 
   /// <summary>
+  /// Calculates the Galois addition.
+  /// <para>Updated by <see href="https://github.com/michelenatale">© Michele Natale 2025</see></para>  
+  /// </summary>
+  /// <param name="left">Desired GF2-Value</param>
+  /// <param name="right">Desired Value</param>
+  /// <returns>Addition of two GF2 values.</returns>
+  public static GF2 operator +(GF2 left, ulong right) =>
+    new(left.Order, left.IDP, left.Value ^ ExtMod(right, left.Order));
+
+  /// <summary>
   /// Calculates the Galois Subtraction.
   /// <para>Updated by <see href="https://github.com/michelenatale">© Michele Natale 2025</see></para>  
   /// </summary>
@@ -111,6 +121,16 @@ partial struct GF2
     left.Order == right.Order ? new(left.Order, left.IDP, left.Value ^ right.Value)
     : throw new ArgumentOutOfRangeException(nameof(left),
      $"'-'-Operation has failed!");
+
+  /// <summary>
+  /// Calculates the Galois Subtraction.
+  /// <para>Updated by <see href="https://github.com/michelenatale">© Michele Natale 2025</see></para>  
+  /// </summary>
+  /// <param name="left">Desired GF2-Value</param>
+  /// <param name="right">Desired Value</param>
+  /// <returns>Subtraction of two GF2-Values</returns>
+  public static GF2 operator -(GF2 left, ulong right) =>
+    new(left.Order, left.IDP, left.Value ^ ExtMod(right, left.Order));
 
   /// <summary>
   /// Calculates the Galois Multiplication.
@@ -136,6 +156,25 @@ partial struct GF2
   }
 
   /// <summary>
+  /// Calculates the Galois multiplication.
+  /// <para>Updated by <see href="https://github.com/michelenatale">© Michele Natale 2025</see></para>  
+  /// </summary>
+  /// <param name="left">Desired GF2-Value</param>
+  /// <param name="right">Desired Value</param>
+  /// <returns>Multiplication of two GF2-Values</returns>
+  public static GF2 operator *(GF2 left, ulong right)
+  {
+    right = ExtMod(right, left.Order);
+    ulong order = left.Order, result = 0;
+    if (left.Value != 0 && right != 0)
+    {
+      var tmp = (left.Log[left.Value] + left.Log[right]) % (order - 1);
+      result = left.Exp[tmp];
+    }
+    return new GF2(order, left.IDP, result);
+  }
+
+  /// <summary>
   /// Calculates the Galois Multiplication.
   /// <para>Updated by <see href="https://github.com/michelenatale">© Michele Natale 2025</see></para>  
   /// </summary>
@@ -143,7 +182,7 @@ partial struct GF2
   /// <param name="right">Desired GF-Value</param>
   /// <returns>Division of two GF-Values</returns>
   /// <exception cref="ArgumentOutOfRangeException"></exception>
-  /// <exception cref="ArgumentNullException"></exception>
+  /// <exception cref="DivideByZeroException"></exception>
   public static GF2 operator /(GF2 left, GF2 right)
   {
     if (left.Order != right.Order)
@@ -151,12 +190,36 @@ partial struct GF2
         $"'/'-Operation has failed!");
 
     if (right.Value == 0)
-      throw new ArgumentNullException(nameof(right));
+      throw new DivideByZeroException(nameof(right));
 
     ulong order = left.Order, result = 0;
     if (left.Value != 0)
     {
       var tmp = (order + left.Log[left.Value] - right.Log[right.Value] - 1) % (order - 1);
+      result = left.Exp[tmp];
+    }
+    return new GF2(order, left.IDP, result);
+  }
+
+  /// <summary>
+  /// Calculates the Galois division.
+  /// <para>Updated by <see href="https://github.com/michelenatale">© Michele Natale 2025</see></para>  
+  /// </summary>
+  /// <param name="left">Desired GF2-Value</param>
+  /// <param name="right">Desired Value</param>
+  /// <returns>Division of two GF-Values</returns>
+  /// <exception cref="DivideByZeroException"></exception>
+  public static GF2 operator /(GF2 left, ulong right)
+  {
+    right = ExtMod(right, left.Order);
+
+    if (right == 0)
+      throw new DivideByZeroException(nameof(right));
+
+    ulong order = left.Order, result = 0;
+    if (left.Value != 0)
+    {
+      var tmp = (order + left.Log[left.Value] - left.Log[right] - 1) % (order - 1);
       result = left.Exp[tmp];
     }
     return new GF2(order, left.IDP, result);
