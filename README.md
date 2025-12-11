@@ -20,7 +20,7 @@ https://github.com/michelenatale/Mathematic/tree/main/GaloisField2x
 
 ## Big Primes Async-Await Generator
 
-A very fast cryptographically secure generator for very big primes numbers based on the producer-consumer principle.
+A very fast cryptographically secure generator for very big primes numbers (BigInteger) based on the producer-consumer principle.
 
 https://github.com/michelenatale/Mathematic/tree/main/BigPrimesGenerator
 
