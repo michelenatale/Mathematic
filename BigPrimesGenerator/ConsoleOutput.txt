@@ -1,0 +1,196 @@
+Benchmark: 10 primes, B8 bits
+Parallelism: 2, Confidence: Normal
+Serial: 10 primes in 0.09 s
+Parallel: 10 primes in 0.03 s
+Avg Serial: 0.01 s/prime
+Avg Parallel: 0.00 s/prime
+
+Benchmark: 10 primes, B16 bits
+Parallelism: 2, Confidence: Normal
+Serial: 10 primes in 0.03 s
+Parallel: 10 primes in 0.02 s
+Avg Serial: 0.00 s/prime
+Avg Parallel: 0.00 s/prime
+
+Benchmark: 10 primes, B32 bits
+Parallelism: 2, Confidence: Normal
+Serial: 10 primes in 0.05 s
+Parallel: 10 primes in 0.02 s
+Avg Serial: 0.00 s/prime
+Avg Parallel: 0.00 s/prime
+
+Benchmark: 10 primes, B64 bits
+Parallelism: 2, Confidence: Normal
+Serial: 10 primes in 0.06 s
+Parallel: 10 primes in 0.03 s
+Avg Serial: 0.01 s/prime
+Avg Parallel: 0.00 s/prime
+
+Benchmark: 10 primes, B96 bits
+Parallelism: 2, Confidence: Normal
+Serial: 10 primes in 0.07 s
+Parallel: 10 primes in 0.03 s
+Avg Serial: 0.01 s/prime
+Avg Parallel: 0.00 s/prime
+
+Benchmark: 10 primes, B128 bits
+Parallelism: 2, Confidence: Normal
+Serial: 10 primes in 0.09 s
+Parallel: 10 primes in 0.04 s
+Avg Serial: 0.01 s/prime
+Avg Parallel: 0.00 s/prime
+
+Benchmark: 10 primes, B192 bits
+Parallelism: 8, Confidence: Normal
+Serial: 10 primes in 0.21 s
+Parallel: 10 primes in 0.08 s
+Avg Serial: 0.02 s/prime
+Avg Parallel: 0.01 s/prime
+
+Benchmark: 10 primes, B256 bits
+Parallelism: 8, Confidence: Normal
+Serial: 10 primes in 0.44 s
+Parallel: 10 primes in 0.11 s
+Avg Serial: 0.04 s/prime
+Avg Parallel: 0.01 s/prime
+
+Benchmark: 10 primes, B384 bits
+Parallelism: 8, Confidence: Normal
+Serial: 10 primes in 0.59 s
+Parallel: 10 primes in 0.16 s
+Avg Serial: 0.06 s/prime
+Avg Parallel: 0.02 s/prime
+
+Benchmark: 10 primes, B512 bits
+Parallelism: 8, Confidence: Normal
+Serial: 10 primes in 1.12 s
+Parallel: 10 primes in 0.39 s
+Avg Serial: 0.11 s/prime
+Avg Parallel: 0.04 s/prime
+
+Benchmark: 10 primes, B768 bits
+Parallelism: 8, Confidence: Normal
+Serial: 10 primes in 3.26 s
+Parallel: 10 primes in 1.27 s
+Avg Serial: 0.33 s/prime
+Avg Parallel: 0.13 s/prime
+
+Benchmark: 10 primes, B1024 bits
+Parallelism: 8, Confidence: Normal
+Serial: 10 primes in 4.51 s
+Parallel: 10 primes in 1.61 s
+Avg Serial: 0.45 s/prime
+Avg Parallel: 0.16 s/prime
+
+Benchmark: 2 primes, B1536 bits
+Parallelism: 8, Confidence: Normal
+Serial: 2 primes in 3.21 s
+Parallel: 2 primes in 1.80 s
+Avg Serial: 1.61 s/prime
+Avg Parallel: 0.90 s/prime
+
+Benchmark: 2 primes, B2048 bits
+Parallelism: 8, Confidence: Normal
+Serial: 2 primes in 5.35 s
+Parallel: 2 primes in 3.62 s
+Avg Serial: 2.67 s/prime
+Avg Parallel: 1.81 s/prime
+
+Benchmark: 2 primes, B3072 bits
+Parallelism: 4, Confidence: Normal
+Serial: 2 primes in 11.38 s
+Parallel: 2 primes in 18.16 s
+Avg Serial: 5.69 s/prime
+Avg Parallel: 9.08 s/prime
+
+Benchmark: 1 primes, B4096 bits
+Parallelism: 4, Confidence: Normal
+Serial: 1 primes in 14.07 s
+Parallel: 1 primes in 12.47 s
+Avg Serial: 14.07 s/prime
+Avg Parallel: 12.47 s/prime
+
+
+Benchmark: 10 primes, B8, Confidence: Normal
+Serial:   avg 0.02s, std 0.00
+Parallel: avg 0.03s, std 0.00
+Speed-up: 0.98×
+
+Benchmark: 10 primes, B16, Confidence: Normal
+Serial:   avg 0.02s, std 0.00
+Parallel: avg 0.02s, std 0.00
+Speed-up: 1.07×
+
+Benchmark: 10 primes, B32, Confidence: Normal
+Serial:   avg 0.04s, std 0.00
+Parallel: avg 0.03s, std 0.00
+Speed-up: 1.38×
+
+Benchmark: 10 primes, B64, Confidence: Normal
+Serial:   avg 0.04s, std 0.00
+Parallel: avg 0.03s, std 0.00
+Speed-up: 1.41×
+
+Benchmark: 10 primes, B96, Confidence: Normal
+Serial:   avg 0.05s, std 0.00
+Parallel: avg 0.03s, std 0.00
+Speed-up: 1.58×
+
+Benchmark: 10 primes, B128, Confidence: Normal
+Serial:   avg 0.06s, std 0.00
+Parallel: avg 0.03s, std 0.00
+Speed-up: 2.02×
+
+Benchmark: 10 primes, B192, Confidence: Normal
+Serial:   avg 0.17s, std 0.01
+Parallel: avg 0.07s, std 0.00
+Speed-up: 2.66×
+
+Benchmark: 10 primes, B256, Confidence: Normal
+Serial:   avg 0.26s, std 0.00
+Parallel: avg 0.09s, std 0.01
+Speed-up: 3.04×
+
+Benchmark: 10 primes, B384, Confidence: Normal
+Serial:   avg 0.61s, std 0.01
+Parallel: avg 0.20s, std 0.01
+Speed-up: 3.04×
+
+Benchmark: 10 primes, B512, Confidence: Normal
+Serial:   avg 1.26s, std 0.02
+Parallel: avg 0.47s, std 0.07
+Speed-up: 2.67×
+
+Benchmark: 10 primes, B768, Confidence: Normal
+Serial:   avg 3.72s, std 0.05
+Parallel: avg 1.40s, std 0.13
+Speed-up: 2.66×
+
+Benchmark: 10 primes, B1024, Confidence: Normal
+Serial:   avg 5.26s, std 0.29
+Parallel: avg 1.99s, std 0.34
+Speed-up: 2.64×
+
+Benchmark: 2 primes, B1536, Confidence: Normal
+Serial:   avg 3.18s, std 0.22
+Parallel: avg 2.37s, std 0.46
+Speed-up: 1.34×
+
+Benchmark: 2 primes, B2048, Confidence: Normal
+Serial:   avg 6.76s, std 0.37
+Parallel: avg 5.44s, std 1.74
+Speed-up: 1.24×
+
+Benchmark: 2 primes, B3072, Confidence: Normal
+Serial:   avg 16.53s, std 2.83
+Parallel: avg 14.85s, std 3.93
+Speed-up: 1.11×
+
+Benchmark: 1 primes, B4096, Confidence: Normal
+Serial:   avg 22.51s, std 5.07
+Parallel: avg 19.19s, std 4.12
+Speed-up: 1.17×
+
+
+
+FINISH
